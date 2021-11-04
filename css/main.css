@@ -1,0 +1,277 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+  box-sizing: border-box;
+  font: normal 100%/1.3 "Montserrat", sans-serif;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* - - - - - - - - - - Navbar - - - - - - - - - - */
+
+.navbar {
+  background-color: #001;
+  padding: 0.75rem 0;
+  text-align: center;
+}
+
+.navbar .logo {
+  width: 10rem;
+  display: inline-block;
+  max-width: 10rem;
+
+}
+
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  margin-bottom: .75rem;
+}
+
+.nav img {
+  max-width: 100%;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none
+}
+
+/* - - - - - - - - - - Main - - - - - - - - - - */
+
+.hero {
+  background-image: url('../img/hero-banner.jpg');
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero img {
+  max-width: 100%;
+}
+
+.hero-content {
+  max-width: 35em;
+  margin: 0 auto;
+}
+
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  background-color: transparent;
+  color: black;
+  border: .25rem solid black;
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: black;
+  border-color: black;
+  color: #fff;
+}
+
+.cards {
+  padding: 4rem 0;
+}
+
+.cards .container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card, h2 p {
+  list-style-type: none;
+  text-decoration: none;
+  color: darkblue;
+}
+
+.card {
+  display: inline-block;
+  border: 5px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.card-img {
+  background-color: #000;
+  width: 100%;
+  padding-right: 1rem;
+}
+
+.about {
+  background-color: #ccc;
+  
+}
+
+.about .container {
+  display: grid;
+  width: 100%;
+  margin-left: 1rem;
+  grid-template-areas: 
+  'image'
+  'text';
+}
+
+.about .about-content {
+  grid-area: text;
+  padding-bottom: 1rem;
+}
+
+.about .img-wrap {
+  grid-area: image;
+  align-items: center;
+}
+
+.about img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-width: 500px;
+  padding-top: 1rem;
+  
+}
+
+/* - - - - - - - - - - Footer - - - - - - - - - - */
+
+.footer {
+  background-color: #222;
+  text-align: center;
+}
+
+.footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer > .container {
+  padding: 1rem;
+}
+
+.footer .logo {
+  width: 500px;
+  display: inline-block;
+  max-width: 50%;
+  padding-left: 1.25rem;
+}
+
+.sub-footer {
+  background-color: #000;
+  padding: 2rem;
+}
+
+@media only screen and (min-width: 38em) {
+
+  /* - - - - - - - - - - Navbar - - - - - - - - - - */
+  
+  .navbar,
+  .footer {
+    text-align: left;
+  }
+
+  .navbar .nav {
+    flex-grow: 1;
+  }
+
+  .navbar .container,
+  .footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav ul,
+  .nav-footer ul,
+  .sub-footer ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .navbar ul li,
+  .nav-footer ul li,
+  .sub-footer ul li {
+    margin-left: 2rem;
+  }
+
+  
+
+  .hero h1 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 5rem;
+    margin-left: 3rem;
+    text-transform: uppercase;
+  }
+
+  .hero p {
+    text-align: center;
+    font-weight: 400;
+    font-size: 2rem;
+  }
+  /* - - - - - - - - - - Main - - - - - - - - - - */
+  
+
+.cards .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  text-align: center;
+  
+}
+
+
+  .about .container {
+    display: grid;
+    padding: 4rem;
+    grid-template-areas: 
+        'image text';
+    grid-template-columns: 1fr 2fr;    
+  }
+  
+
+  .about .img-wrap {
+    width: 100%;
+  }
+
+  .about .about-content {
+    width: auto;
+    max-width: 100%;
+    width: 60%;
+    padding-left: 2rem;
+  }
+  
+  /* - - - - - - - - - - Footer - - - - - - - - - - */
+
+}
